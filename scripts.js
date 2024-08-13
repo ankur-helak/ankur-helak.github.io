@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    if (typeof marked === 'undefined') {
+        console.error('Marked.js is not loaded.');
+        return;
+    }
+
     fetch('posts.json')
         .then(response => response.json())
         .then(posts => {
