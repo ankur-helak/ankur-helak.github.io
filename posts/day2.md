@@ -1,1 +1,0 @@
-Learnt how to use TailwindCSS
