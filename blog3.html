@@ -1,80 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-white">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Learning Blogs</title>
+    <title>Blog 3</title>
     <link rel="stylesheet" href="/src/main.css">
 </head>
 <body>
-    <h1 class="text-black px-10 text-5xl">Blogs 3</h1>
-    <main>
-        <pre class="px-4 py-5">Introduction to Tailwind CSS
-
-            Tailwind CSS is a utility-first CSS framework that has gained popularity for its unique approach to styling web applications. Unlike traditional CSS frameworks like Bootstrap or Foundation, which provide pre-designed components such as buttons, navbars, and forms, Tailwind CSS focuses on providing low-level utility classes that you can combine to build custom designs without leaving your HTML.
-            
-            What is Tailwind CSS?
-            
-            Tailwind CSS is designed to be highly customizable and flexible. Instead of writing custom CSS for every element, you can apply predefined classes directly in your HTML. These classes are designed to control everything from spacing, typography, colors, to layout and responsiveness. This approach allows developers to rapidly prototype and build complex designs with ease.
-            
-            Key Features
-            
-            1. **Utility-First Approach**: Tailwind provides a comprehensive set of utility classes for common CSS properties like `margin`, `padding`, `font-size`, `color`, `flex`, `grid`, and more. For example, instead of writing custom CSS to add margin, you can use `m-4` directly in your HTML to apply a `16px` margin.
-            
-            2. **Customizability**: Tailwind is highly configurable. You can customize the framework's default settings (colors, spacing, typography, etc.) by modifying the `tailwind.config.js` file. This allows you to adapt the design system to your project's needs.
-            
-            3. **Responsive Design**: Tailwind makes it easy to create responsive designs with its mobile-first classes. By using responsive prefixes like `sm:`, `md:`, `lg:`, you can apply different styles based on the screen size. For example, `md:text-lg` applies a large text size on medium screens and above.
-            
-            4. **Component-Friendly**: Although Tailwind is utility-first, it integrates seamlessly with component-based frameworks like React, Vue, or Angular. You can combine Tailwind’s utility classes with your custom components to create reusable, modular designs.
-            
-            5. **Performance**: Tailwind comes with tools like PurgeCSS that can remove unused CSS, significantly reducing the size of your final CSS bundle. This is particularly beneficial for production environments where performance is critical.
-            
-            Getting Started:
-            
-            To start using Tailwind CSS, you can add it to your project via npm, or use a CDN for quick prototyping:
-            
-            **Installation via npm:**
-            
-            ```bash
-            npm install tailwindcss
-            npx tailwindcss init
-            ```
-            
-            This will generate a `tailwind.config.js` file where you can customize the framework's settings. You can then include Tailwind in your CSS:
-            
-            ```css
-            @tailwind base;
-            @tailwind components;
-            @tailwind utilities;
-            ```
-            
-            **Using CDN:**
-            
-            For quick prototyping, you can include Tailwind directly via CDN:
-            
-            ```html
-            <code>&lt;link href=&quot;https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-            </code>
-            ```
-            
-            #### Example
-            
-            Here’s a simple example of a Tailwind CSS button:
-            
-            ```html
-            <code> &lt;button class=&quot;bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded&quot;&gt;
-                Click me
-              &lt;/button&gt;</code>
-            ```
-            
-            In this example, utility classes like `bg-blue-500` set the background color, `hover:bg-blue-700` changes the color on hover, `text-white` sets the text color, and so on.
-            
-            Conclusion:
-            
-            Tailwind CSS is a powerful tool for developers who want to build custom, responsive designs quickly and efficiently. 
-            Its utility-first approach may take some time to get used to, but once you do, you'll find that it offers unparalleled flexibility and control over your designs. 
-            Whether you're building a small project or a large-scale application, Tailwind CSS is worth considering as your go-to CSS framework.
-        </pre>
+    <nav class=" bg-purple-900 text-white flex justify-between">
+        <span class="text-xl flex items-center mx-3 font-bold">Phones Mania</span>
+        <ul class="px-28 py-4 flex space-x-10 justify-end">
+            <li class="cursor-pointer">Home</li>
+            <li class="cursor-pointer">About</li>
+            <li class="cursor-pointer">Contact</li>
+        </ul>
+    </nav>
+    <main class="bg-fuchsia-100 flex justify-around">
+        <div class="main py-40 pl-10">
+        <div class="text-6xl ">
+            The best phones in the town
+        </div>
+            <p class="py-3 w-2/3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem doloribus, reiciendis, 
+                reprehenderit sapiente dolores, ab voluptatem dolorum obcaecati facere quae? Qui, eum.
+            </p>
+            <div class="buttons my-10">
+                <button class=" bg-purple-800 px-3 py-3 rounded-2xl text-white hover:text-slate-900 hover:bg-fuchsia-700 mx-2">Buy Now</button>
+                <button class="bg-purple-800 px-3 py-3 rounded-2xl text-white hover:text-slate-900 hover:bg-fuchsia-700 mx-2">Contact Us</button>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <img src="src/call.png" alt="Man calling on phone" >
+        </div>
     </main>
 </body>
 </html>

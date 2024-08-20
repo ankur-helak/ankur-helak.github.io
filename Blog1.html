@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Learning Blogs</title>
+    <link rel="stylesheet" href="/src/main.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="max-w-3xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">How to Set Up Tailwind CSS</h1>
+
+        <!-- Step 1 -->
+        <h2 class="text-2xl font-semibold mb-4">Step 1: Install Tailwind via npm</h2>
+        <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg">
+            <button class="absolute top-2 right-2 bg-gray-700 text-gray-200 px-2 py-1 rounded hover:bg-gray-600"
+                onclick="copyToClipboard('#code1')">Copy</button>
+            <pre id="code1" class="whitespace-pre-wrap"><code>npm install tailwindcss</code></pre>
+        </div>
+
+        <!-- Step 2 -->
+        <h2 class="text-2xl font-semibold mb-4">Step 2: Create a Configuration File</h2>
+        <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg">
+            <button class="absolute top-2 right-2 bg-gray-700 text-gray-200 px-2 py-1 rounded hover:bg-gray-600"
+                onclick="copyToClipboard('#code2')">Copy</button>
+            <pre id="code2" class="whitespace-pre-wrap"><code>npx tailwindcss init</code></pre>
+        </div>
+
+        <!-- Step 3 -->
+        <h2 class="text-2xl font-semibold mb-4">Step 3: Create Your CSS File</h2>
+        <div class="relative bg-gray-900 text-gray-100 p-4 rounded-lg">
+            <button class="absolute top-2 right-2 bg-gray-700 text-gray-200 px-2 py-1 rounded hover:bg-gray-600"
+                onclick="copyToClipboard('#code3')">Copy</button>
+            <pre id="code3" class="whitespace-pre-wrap"><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+        </div>
+    </div>
+
+    <!-- JavaScript for Copy Functionality -->
+    <script>
+        function copyToClipboard(elementId) {
+            // Select the code block
+            const code = document.querySelector(elementId).innerText;
+            // Create a temporary textarea to copy the text
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+
+            // Optional: Alert the user that the code was copied
+            alert("Code copied to clipboard!");
+        }
+    </script>
+</body>
+
+</html>
